@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <title> Madhushant - 1490/-</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="int.css" rel="stylesheet" type="text/css">
+    <link href="order.css" rel="stylesheet" type="text/css">
+    <link href="style2.css" rel="stylesheet" type="text/css">
+    <link href="spin.css" rel="stylesheet" type="text/css">
+    <link href="webfiles/style_1.css" rel="stylesheet" type="text/css">
+    <link href="webfiles/intlTelInput.css" rel="stylesheet">
+
+<style>
+  
+  /* Prevent horizontal scroll globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+    .navbar {
+      padding: 8px 0 !important;
+      background-color: #bd2c2c !important;
+      display: flex;
+      flex-direction: column;
+      height: 60px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .centered-video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      /* Prevents the video from exceeding its container's width */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Optional: Adds a shadow for aesthetics */
+      border-radius: 8px;
+      /* Optional: Adds rounded corners to the video */
+    }
+
+    .navbar img {
+      height: 45px;
+    }
+
+    .comments {
+      max-width: 100% !important;
+      background: #f4f4f4 !important;
+      padding: 20px !important;
+      border-radius: 10px !important;
+    }
+
+    .comments__body {
+      background: #fff !important;
+    }
+
+    .comments__body img {
+      max-width: 280px !important;
+      border-radius: 3px !important;
+    }
+
+    .btn {
+      display: block;
+      max-width: 280px;
+      margin: 10px auto 20px auto;
+      padding: 15px 20px 15px 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #fff !important;
+      text-decoration: none;
+      background: #ba0009;
+      -webkit-border-radius: 50px;
+      border-radius: 50px;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+    }
+  </style>
+
+<style>
+    .price-container {
+      font-family: Arial, sans-serif;
+    }
+
+    .price {
+      font-size: 25px;
+    }
+
+    .price.strike {
+      text-decoration: line-through;
+    }
+
+    .price.new {
+      font-size: 36px;
+      color: red;
+    }
+
+    .video-container {
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .video-container video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 8px;
+    }
+
+    /* Unmute button */
+    .unmute-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .unmute-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .unmute-btn i {
+      font-size: 20px;
+    }
+
+    /* Cross Speaker Icon for Unmute */
+    .unmute-btn i {
+      color: #fff;
+    }
+
+    .video-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .mute-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mute-btn img {
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+      /* Makes only the button clickable, not the image */
+    }
+
+    .mute-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .review-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="iti-mobile">
+<nav class="navbar">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">
+<img src="logo.png" alt="">
+</a>
+<h1 style="color: white; font-size: 13px; margin: 0"> National Health Authority <p style="margin: 0">Government of India</p>
+</h1>
+</nav>
+
+<div class="container bg-white pt-2">
+<div class="row">
+<div class="col-lg-9 offset-md-1">
+<div class="mb-2">
+<span class="badge badge-info" id="todayDate"></span>
+</div>
+
+<h2 class="md-5 mb-3">
+<b> क्या? आप डायबिटीज से परेशान हैं? ब्लड शुगर कंट्रोल करने का 100% आयुर्वेदिक तरीका! </b>
+</h2>
+
+<div class="alert alert-info border-0 mb-3" role="alert">
+<h5 class="md-5 text-center mb-0 p-2">
+<b>यह सामग्री शैक्षिक उद्देश्य के लिए है। व्यक्तिगत परिणाम भिन्न हो सकते हैं।</b>
+</h5>
+</div>
+
+<div class="row">
+<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+<img alt="" class="rounded mx-auto d-block img-fluid img-fluid--1style shadow" src="yog_guru.webp" style="float: left">
+</div>
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+<p> नमस्ते, मैं डॉ. ए.के. ब्लड शुगर संतुलन और ऊर्जा के लिए एक आयुर्वेद-प्रेरित, सरल तरीका साझा कर रहा/रही हूँ। </p>
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">अभी ऑर्डर करें</a>
+</div>
+<p></p>
+<img alt="" class="rounded mx-auto d-block img-fluid" src="sc5-img4.webp">
+<p>कुछ हफ्तों में कई लोगों को भोजन के बाद रीडिंग्स अधिक स्थिर दिखती हैं। ऊर्जा और नींद बेहतर महसूस हो सकती है। परिणाम व्यक्ति-व्यक्ति भिन्न हो सकते हैं।</p>
+<div class="alert p-4 alert-primary border-0" role="alert">
+<ul class="mb-0 pl-3 pr-3">
+<li>भोजन के बाद शुगर स्पाइक्स में मदद</li>
+<li>इंसुलिन संवेदनशीलता सपोर्ट</li>
+<li>दिनभर ऊर्जा में सहयोग</li>
+<li>वजन व क्रेविंग मैनेजमेंट</li>
+<li>दीर्घकालिक स्वास्थ्य पर फोकस</li>
+</ul>
+</div>
+यह इलाज नहीं है; सही आहार और गतिविधि के साथ बेहतर परिणाम मिल सकते हैं.
+<p style="padding-top: 10px; margin-bottom: 0">
+<b>चाहे आप अभी शुरू कर रहे हों या पहले बहुत कुछ आज़मा चुके हों—यह तरीका सरल और व्यावहारिक है। </b>
+</p>
+</div>
+</div>
+
+<div class="video-container">
+<video autoplay id="video" loop muted playsinline style="width: 100%; max-width: 800px; border-radius: 8px;">
+<source src="cardrive.mp4" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<button class="mute-btn" id="muteBtn" type="button">
+<img alt="Mute Icon" id="muteIcon" src="mute.png">
+</button>
+</div>
+
+<p style="clear: both; padding-top: 20px"> यदि आपने पहले विभिन्न उपाय आज़माए हैं और फिर भी ब्लड शुगर को स्थिर रखना कठिन लगा है, तो आप अकेले नहीं हैं। सही मार्गदर्शन, संतुलित आहार, नियमित गतिविधि और उपयुक्त सपोर्ट के साथ अधिकांश लोगों को कुछ ही हफ्तों में सकारात्मक बदलाव दिखने लगते हैं। </p>
+
+<div class="rounded shadow bg-light">
+<img alt="" class="rounded mx-auto d-block img-fluid" src="7.webp">
+<center>
+<p class="m-0 p-2">
+<small>
+<i>2 हफ्तों में मेरी फास्टिंग और पोस्ट-प्रांडियल रीडिंग अधिक स्थिर हो गईं। दिनभर ऊर्जा बेहतर महसूस होती है।</i>
+</small>
+</p>
+<p>
+<img alt="" class="rounded mx-auto d-block img-fluid" src="sawdhan.webp">
+</p>
+</center>
+</div>
+
+<p></p>
+
+<div class="alert p-4 alert-success border-0" role="alert">
+<ul class="mb-0 pl-3 pr-3">
+<li>भोजन के बाद की रीडिंग अधिक स्थिर दिखीं।</li>
+<li> नियमित उपयोग, आहार और गतिविधि के साथ HbA1c में क्रमिक सुधार देखा। </li>
+<li> दिनभर ऊर्जा में सहयोग मिला और थकान में कमी महसूस हुई। </li>
+<li> क्रेविंग कंट्रोल में मदद मिली और नींद की गुणवत्ता बेहतर लगी। </li>
+<li> परिवार के साथ दीर्घकालिक स्वास्थ्य लक्ष्यों पर फोकस करना आसान हुआ। </li>
+</ul>
+</div>
+
+<div class="container">
+<div class="review-section">
+<div class="review-card">
+<h4>Customer Review 1</h4>
+<p>मैं कोलकाता से तन्मय रॉय हूँ। आहार में बदलाव और इस सपोर्ट के साथ 3 हफ्तों में मेरी फास्टिंग रीडिंग अधिक स्थिर हुईं और दिनभर ऊर्जा बेहतर रही।</p>
+</div>
+
+<div class="review-card">
+<h4>Customer Review 2</h4>
+<p>मैं राजकुमार (42) कोलकाता से। पोस्ट-प्रांडियल शुगर स्पाइक्स कम दिखे और क्रेविंग्स कंट्रोल करना आसान हुआ।</p>
+</div>
+
+<div class="review-card">
+<h4>Customer Review 3</h4>
+<p>मैं शंकर (40) वेस्ट बंगाल से। नियमित वॉक और संतुलित आहार के साथ, 1 महीने में रीडिंग्स पहले से अधिक स्थिर दिखीं।</p>
+</div>
+</div>
+</div>
+
+<p></p>
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+<p></p>
+</div>
+
+<p><b>ऊपर दिए उदाहरण व्यक्तिगत अनुभव हैं और व्यक्ति-व्यक्ति में भिन्न हो सकते हैं।</b></p>
+<p> उपयोगकर्ताओं ने अक्सर संतुलित आहार, नियमित गतिविधि और इस सपोर्ट के साथ बेहतर ऊर्जा और अधिक स्थिर रीडिंग्स की सूचना दी है। किसी भी सप्लिमेंट की तरह, परिणाम समय के साथ और व्यक्तिगत रूप से भिन्न हो सकते हैं। नीचे कुछ अनुभव साझा किए गए हैं: </p>
+
+<div class="alert p-3 border-0 mb-3" role="alert" style="background: #f4f4f4">
+<div class="row">
+<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+<img alt="" class="rounded mx-auto d-block img-fluid" src="sc5-img4.webp">
+</div>
+<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-3 pl-3 pr-3 pb-lg-3">
+<b>
+<p> यह मेरे लिए सहायक रहा। मेरी फास्टिंग और पोस्ट-प्रांडियल रीडिंग पहले अस्थिर रहती थीं। अब नियमितता आई है। </p>
+<p class="mb-0"> मैंने आहार और वॉक के साथ इसे शामिल किया। परिवार के साथ समय और स्वास्थ्य पर फोकस करना आसान हुआ। </p>
+</b>
+</div>
+</div>
+</div>
+
+<div class="alert p-3 border-0 mb-3" role="alert" style="background: #f4f4f4">
+<div class="row">
+<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+<img alt="" class="rounded mx-auto d-block img-fluid" src="webfiles/841862.webp" style="max-width: 240px; width: 100%">
+</div>
+<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-3 pl-3 pr-3 pb-lg-3">
+<b>
+<p> Madhu shant ने भोजन के बाद की स्पाइक्स को संभालने में मेरी मदद की। </p>
+<p class="mb-0"> 34 की उम्र में, आहार और गतिविधि के साथ इसे जोड़ने पर दिनभर की ऊर्जा बेहतर लगी।</p>
+</b>
+</div>
+</div>
+</div>
+
+<p></p>
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+</div>
+<p></p>
+
+<h2 class="md-5 text-center">
+<b>कैसे विज्ञान की मदद से भोजन के बाद ब्लड शुगर स्पाइक्स को प्रबंधित किया जाए और ऊर्जा को सपोर्ट किया जाए? </b>
+</h2>
+
+<p> संतुलित आहार, नियमित गतिविधि और सही सपोर्ट के साथ, कई लोगों को कुछ दिनों से हफ्तों में भोजन के बाद की रीडिंग अधिक स्थिर दिखने लगती हैं। </p>
+<img alt="" class="product-img" src="IMG_3157.png" style="max-width: 680px; margin-bottom: 20px">
+<p> यह जादू नहीं है, बल्कि विज्ञान-प्रेरित हर्बल सपोर्ट और अच्छी आदतों का संयोजन है जो इंसुलिन संवेदनशीलता, ऊर्जा और नींद में सहयोग कर सकता है। </p>
+<p> Madhu Shant के साथ अनुभव किए गए सहायक प्रभाव (व्यक्तिगत अनुभव भिन्न हो सकते हैं): </p>
+<img alt="" class="rounded mx-auto d-block img-fluid" src="7.webp" style="border: double">
+
+<p>
+<br> भोजन के बाद शुगर रेंज • दिनभर ऊर्जा • नींद की गुणवत्ता • वजन प्रबंधन • क्रेविंग कंट्रोल • संपूर्ण स्वास्थ्य पर फोकस
+</p>
+
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+</div>
+
+<h2>
+<p><b>Madhu Shant का ऑर्डर अभी देना क्यों उपयोगी हो सकता है</b></p>
+</h2>
+
+<p> जब ब्लड शुगर असंतुलित होती है, तो ऊर्जा और आत्मविश्वास पर असर पड़ सकता है। पर अब आपके पास सुरक्षित और व्यावहारिक सपोर्ट का विकल्प है। आपको बस आखिरी कदम उठाना बाकी है। </p>
+<p><b>मेरा आपसे अनुरोध है: पहले अपने डॉक्टर से सलाह लें और फिर अपने स्वास्थ्य लक्ष्यों के अनुसार निर्णय लें।</b></p>
+<p> हमारा उद्देश्य सुरक्षित, प्राकृतिक घटकों के साथ एक ऐसा सपोर्ट प्रदान करना है जो आपकी दिनचर्या में सरलता से फिट हो सके। किसी भी सप्लिमेंट का उपयोग शुरू करने से पहले चिकित्सा परामर्श लेना आवश्यक है। <br></p>
+
+<p>
+<img alt="" class="rounded mx-auto d-block img-fluid" src="sert.webp" style="border: double">
+</p>
+
+<p></p>
+
+<h2>
+<p><b>क्या आप भी उन हज़ारों लोगों से जुड़ना चाहते हैं जिन्होंने बेहतर ब्लड शुगर प्रबंधन का अनुभव साझा किया है?</b></p>
+</h2>
+
+<p> मैंने आपको बिना किसी परेशानी के इस सपोर्ट के बारे में जानकारी दी। अब आप जानते हैं कि यह कैसे काम कर सकता है और यह आपकी दिनचर्या में कैसे फिट हो सकता है। ब्लड शुगर प्रबंधन की राह में पहला कदम हमेशा सबसे कठिन होता है—इसीलिए हमने इसे सरल और व्यावहारिक रखा है। </p>
+<p> यह बहुत सरल है। आप केवल वास्तविक परिणामों के लिए भुगतान करेंगे, न कि वादों के लिए। इस सेवा को पाने के लिए, कृपया नीचे दिया गया फ़ॉर्म भरें और हम आपको फोन करेंगे। </p>
+
+<div class="alert alert-danger border-0" role="alert">
+<center>
+<p><b> जानना ज़रूरी है: </b></p>
+<img alt="" class="product-img" src="IMG_3157.png" style="max-width: 680px; margin-bottom: 20px">
+</center>
+<p> आपका ऑर्डर सुरक्षित और गोपनीय पैकेजिंग में भेजा जाएगा। डिलीवरी के समय कोई संवेदनशील जानकारी पैकेज पर प्रदर्शित नहीं की जाती। </p>
+<center>
+<p class="m-0 font-weight-bold">पूरी तरह से गुमनाम।</p>
+</center>
+</div>
+
+<img alt="" class="rounded mx-auto d-block img-fluid" src="webfiles/Group1208.webp" style="border: double">
+
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+</div>
+
+<p> कृपया केवल सप्लायर की आधिकारिक साइट से ही ऑर्डर करें ताकि प्रामाणिक उत्पाद और सपोर्ट मिल सके। </p>
+<p><b> यदि उत्पाद आपकी अपेक्षाओं पर खरा नहीं उतरता, तो हमारी आसान रिफंड नीति लागू होती है। यह ऑफर सीमित समय के लिए उपलब्ध है। </b></p>
+
+<img alt="" class="rounded mx-auto d-block img-fluid" src="made%20in%20Germany.webp">
+
+<p></p>
+
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+</div>
+
+<div style="margin-bottom: 20px;">
+<img alt="" class="product-img" src="IMG_3157.png" style="max-width: 360px; margin-bottom: 10px">
+<center>
+<img class="" src="qq.webp" style="max-width: 200px" alt="">
+</center>
+<br>
+</div>
+
+<div style="margin: auto; max-width: 600px; padding: 20px; background-color: #f5f5f5; border-radius: 10px; border: 2px solid #e74c3c;">
+<div class="order_block">
+<div id="orderForm">
+<div class="wp-caption aligncenter">
+<center>
+
+<div class="alert alert-secondary border-0" role="alert" style="background: #f5f5f5 !important; color: #000; font-weight: bold;">
+<p class="mb-2"> ऑफ़र समाप्त होने में शेष समय: </p>
+<div class="vip-countdown timer" id="timer">10:00</div>
+<p></p>
+</div>
+
+<h3 class="p-2 mb-3 mt-0 offer-price" style="font-family: Arial, sans-serif; font-size: 20px;">
+<span class="discount-text">पुरानी कीमत 5000/-, 60% छूट के साथ</span> <br> नई कीमत मात्र <span class="blinking-price" style="font-weight: bold; color: #000000;">1490/- रुपये</span>
+</h3>
+<p></p>
+<div class="stock text-danger">सिर्फ <strong id="stock-count">17</strong> पैकेट बचे हैं</div>
+<p></p>
+</center>
+
+<style>
+.vip-countdown {
+  display: inline-block;
+  padding: 15px 25px;
+  background: linear-gradient(145deg, #e74c3c, #f39c12);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: glow 1.5s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.7), 0 0 40px rgba(255, 165, 0, 0.5);
+  }
+}
+
+.discount-text {
+  color: #d9534f;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blinking-price {
+  font-weight: bold;
+  color: #f39c12;
+  font-size: 28px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#submitButton {
+  width: 300px;
+  height: 60px;
+  background: linear-gradient(to right, #f39c12, #e74c3c);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#submitButton.loading {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#submitButton:active {
+  animation: shake 0.3s ease-in-out;
+}
+
+.order-processing {
+  color: #fff;
+  background: #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
+
+<div id="orderFormBorder">
+<br>
+<center>
+
+<div class="elementor-widget-container">
+<form autocomplete="off" class="elementor-form" id="leadForm">
+<div class="elementor-form-fields-wrapper elementor-labels-above">
+
+<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+<label class="elementor-field-label" for="form-field-name">Full Name</label>
+<input class="elementor-field elementor-size-sm elementor-field-textual" id="form-field-name" name="name" placeholder="अपना पूरा नाम भरिये" required size="1" type="text">
+</div>
+
+<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-phone elementor-col-100 elementor-field-required">
+<label class="elementor-field-label" for="form-field-phone">Phone Number</label>
+<input class="elementor-field elementor-size-sm elementor-field-textual" id="form-field-phone" name="phone" placeholder="10-digit phone number" pattern="^[0-9]{10}$" maxlength="10" minlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" title="Enter exactly 10 digit mobile number" required size="1" type="tel">
+</div>
+
+<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-address elementor-col-100 elementor-field-required">
+<label class="elementor-field-label" for="form-field-address">Address</label>
+<textarea class="elementor-field-textual elementor-field elementor-size-sm" id="form-field-address" name="address" placeholder="कृपया अपना पूरा पता पिनकोड के साथ दर्ज करें अन्यथा आपका ऑर्डर डिलीवर नहीं किया जाएगा!" required rows="4"></textarea>
+</div>
+
+<div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-lead_source elementor-col-100">
+<input type="hidden" id="utm_source" name="utm_source">
+<input type="hidden" id="utm_medium" name="utm_medium">
+<input type="hidden" id="utm_campaign" name="utm_campaign">
+<input type="hidden" id="utm_term" name="utm_term">
+<input type="hidden" id="utm_content" name="utm_content">
+<input type="hidden" id="fbclid" name="fbclid">
+<input type="hidden" id="gclid" name="gclid">
+<input type="hidden" id="page_url" name="page_url">
+<input type="hidden" id="referrer" name="referrer">
+<input type="hidden" id="user_agent" name="user_agent">
+<input type="hidden" id="device" name="device">
+</div>
+
+<style>
+  #form-field-address {
+    margin-bottom: 25px; /* spacing after address field */
+  }
+</style>
+
+<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+<button class="elementor-button elementor-size-sm" id="submitBtn" type="submit">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text" id="submitBtnText">अभी ऑर्डर करें</span>
+</span>
+</button>
+</div>
+
+<div id="formMessage" style="margin-top:10px;font-weight:bold;"></div>
+</div>
+</form>
+</div>
+</center>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+form {
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10000;
+  display: none;
+}
+
+.loader img {
+  position: absolute;
+  width: 10%;
+  bottom: 50%;
+  left: 50%;
+  transform: translateY(50%);
+  transform: translateX(-50%);
+}
+</style>
+
+</div>
+</div>
+
+<div class="comments">
+<h2 class="comments__title">टिप्पणियाँ</h2>
+
+<div class="fade2" style="display: block">
+<div class="comments__item">
+<div class="comments__avatar">
+<img src="ava1.webp" alt="">
+</div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">1 मिनट पहले</div>
+<span class="comments__name">Jobin Dodiya (Bombay)</span>
+</div>
+<div class="comments__text">
+<p> 2 हफ्तों में मेरी फास्टिंग और पोस्ट-प्रांडियल रीडिंग्स अधिक स्थिर हुईं। अब भोजन चुनना आसान लगता है। </p>
+</div>
+<div class="like-facebook">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">
+<img src="like.png" alt="">
+</a>
+</div>
+<div class="panel-funct">
+<div class="add-comment">Add comment</div>
+<div class="share">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="fade1">
+<div class="comments__item">
+<div class="comments__avatar">
+<img src="webfiles/ava2.webp" alt="">
+</div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">1 मिनट पहले</div>
+<span class="comments__name">Neerendra Bhakta (Delhi)</span>
+</div>
+<div class="comments__text">
+<p> मेरा HbA1c धीरे-धीरे कम हो रहा है। आहार और वॉक के साथ यह सपोर्ट मेरे लिए उपयोगी रहा। </p>
+<p>
+<img src="webfiles/coms1.webp" alt="">
+</p>
+</div>
+<div class="like-facebook">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">
+<img src="like.png" alt="">
+</a>
+</div>
+<div class="panel-funct">
+<div class="add-comment">Add comment</div>
+<div class="share">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava3.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">16 मिनट पहले</div>
+<span class="comments__name">Peter Mathai (Delhi)</span>
+</div>
+<div class="comments__text"><p> मुझे पोस्ट-डिनर शुगर स्पाइक्स की चिंता रहती थी। अब रीडिंग्स पहले से अधिक स्थिर हैं। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava4.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">16 मिनट पहले</div>
+<span class="comments__name">Juhi Narayan (Ahmedabad)</span>
+</div>
+<div class="comments__text"><p> मेरे पिता की रीडिंग्स अस्थिर थीं। संतुलित आहार और इस सपोर्ट के साथ कुछ हफ्तों में फर्क दिखा। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava5.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">16 मिनट पहले</div>
+<span class="comments__name">Rajesh Yadu Gala (Bangalore)</span>
+</div>
+<div class="comments__text"><p> यह सपोर्ट मेरे लिए सहायक रहा। एक हफ्ते में ऊर्जा और नींद की गुणवत्ता बेहतर लगी। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava6.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">21 मिनट पहले</div>
+<span class="comments__name">Ajay Panchal (Delhi)</span>
+</div>
+<div class="comments__text"><p> अब शाम की वॉक और भोजन के साथ रूटीन में स्थिरता आई है। रीडिंग्स पहले से बेहतर रहती हैं। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava7.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">25 मिनट पहले</div>
+<span class="comments__name">Hetan Rai (Bombay)</span>
+</div>
+<div class="comments__text"><p>मेरी रोज़ की रीडिंग्स स्थिर हैं और सुबह की फास्टिंग बेहतर दिखती है।</p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava8.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">43 मिनट पहले</div>
+<span class="comments__name">Kabeer Lal Nayar (शहर का नाम निर्दिष्ट नहीं)</span>
+</div>
+<div class="comments__text"><p> मैंने कई उपाय आज़माए थे। यह सपोर्ट और आहार के साथ मुझे भोजन के बाद की स्पाइक्स में सहायता मिली। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava9.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">49 मिनट पहले</div>
+<span class="comments__name">Raju Raj (Surat)</span>
+</div>
+<div class="comments__text"><p> मुझे लगा था कि कुछ फायदा नहीं होगा, क्योंकि पहले बहुत कुछ ट्राय किया था। लेकिन यहाँ आहार और गतिविधि के साथ मुझे स्थिर रीडिंग्स दिखीं। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava10.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">1 घंटे पहले</div>
+<span class="comments__name">Chitranjan Swamy (Mumbai)</span>
+</div>
+<div class="comments__text"><p> मेरा वजन थोड़ा कम हुआ और क्रेविंग्स कंटROL करना आसान हो गया। मुझे पैकेज 5 दिनों में मिल गया था। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+
+<div class="comments__item">
+<div class="comments__avatar"><img src="ava11.webp" alt=""></div>
+<div class="comments__body">
+<div class="comments__info">
+<div class="time-comments">1 घंटे पहले</div>
+<span class="comments__name">Ishat Dalal (शहर का नाम निर्दिष्ट नहीं)</span>
+</div>
+<div class="comments__text"><p> मुझे भी पैकेट 6 दिनों में मिल गया था। कस्टमर सपोर्ट ने उपयोग और आहार पर उपयोगी मार्गदर्शन दिया। </p></div>
+<div class="like-facebook"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')"><img src="like.png" alt=""></a></div>
+<div class="panel-funct"><div class="add-comment">Add comment</div><div class="share"><a href="javascript:void(0);" onclick="smoothScroll('orderForm')">Share</a></div></div>
+</div>
+</div>
+</div>
+
+<div class="button-bottom pb-0">
+<a href="javascript:void(0);" onclick="smoothScroll('orderForm')">ऑर्डर करें</a>
+</div>
+
+<div class="footer__in">
+<div class="foot_en_center" style=" text-align: center; margin: 0px auto; padding: 30px 0; font-size: 15px;"> © 2026 Copyright. All rights reserved. </div>
+</div>
+
+<div class="wr-box-order box1">
+<div class="order-box"> नाम: *. **** ****, कस्बा: *******<br> 2 आइटम का आदेश दिया </div>
+</div>
+<div class="wr-box-order box2">
+<div class="order-box"> नाम: *. **** ****, कस्बा: *******<br> 1 आइटम का ऑर्डर दिया </div>
+</div>
+
+<div class="spin-result-wrapper" style="display: none">
+<div class="pop-up-window">
+<div class="close-popup"></div>
+<span class="pop-up-heading">बधाई हो!</span>
+<p class="pop-up-text">उत्पादों पर आपको -50% की छूट मिलती है।</p>
+<span class="pop-up-button hhh">OK</span>
+</div>
+</div>
+
+<style>
+    .comeback_layout {
+      display: none;
+      position: fixed;
+      padding: 10px;
+      color: #000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 20000000;
+      background: rgba(0, 0, 0, 0.75);
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+    }
+
+    .comeback_layout::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .comeback_wrapper {
+      width: 100%;
+      max-width: 450px;
+      margin: auto;
+    }
+
+    .comeback_container {
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(to top, #fff, #fff);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .comeback_container .btn {
+      display: block;
+      width: 100%;
+      color: #fff;
+      background: #c73030;
+      text-transform: uppercase;
+      padding: 20px 30px;
+      font-size: 21px;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 12px;
+      text-decoration: none !important;
+      -webkit-animation: 1s pulse2 infinite alternate ease-in-out;
+      animation: 1s pulse2 infinite alternate ease-in-out;
+    }
+
+    .comeback_img {
+      height: 100%;
+      width: auto;
+      margin: 10px auto;
+    }
+
+    .promo__title {
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 65px;
+      text-align: center;
+      color: #000;
+      text-shadow: none !important;
+      background-position: 0 0;
+      -webkit-background-clip: text;
+      animation: background 5s infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .comeback_container p {
+        font-size: 16px;
+        line-height: 1 !important;
+      }
+
+      .promo__title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .comeback_header {
+      margin-bottom: 25px;
+    }
+
+    .comeback_header p {
+      margin: 5px auto;
+    }
+
+    .comeback_body {
+      background: linear-gradient(to right, #7b9fcc, #3c72b5);
+      height: 150px;
+      padding: 10px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .comeback_body span {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    .comeback_footer p {
+      width: 100%;
+      margin-left: auto;
+      margin-right: 0;
+      line-height: 24px;
+    }
+
+    .comeback_footer {
+      margin-bottom: 30px;
+      margin-top: 15px;
+    }
+
+    .comeback_footer::before {
+      content: "";
+      background-size: 150px 150px;
+      width: 150px;
+      height: 150px;
+      background-repeat: no-repeat;
+      margin-left: 150px;
+      margin-top: -20px;
+      position: absolute;
+    }
+
+    @media (max-width: 540px) {
+      .comeback_footer::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .comeback_container img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .comeback_footer p {
+        margin-right: 1em;
+      }
+    }
+
+    @media (max-width: 321px) {
+      .comeback_footer p {
+        margin-right: 2em;
+      }
+    }
+  </style>
+
+<div class="comeback_layout" id="comebackLayout">
+  <div class="comeback_wrapper">
+    <div class="comeback_container">
+      <div class="comeback_header">
+        <div class="promo__title">रुकिए!</div>
+        <p><b>ऑफ़र अभी उपलब्ध है</b></p>
+      </div>
+      <div class="comeback_footer">
+        <p>नीचे फ़ॉर्म भरें और हमारी टीम आपसे संपर्क करेगी।</p>
+      </div>
+      <a href="javascript:void(0);" class="btn" onclick="hideComeback(); smoothScroll('orderForm');">अभी ऑर्डर करें</a>
+    </div>
+  </div>
+</div>
+
+<style>
+    .sale-alert {
+      position: fixed;
+      top: 20px;
+      right: -350px;
+      background-color: #d9eaff;
+      color: black;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 12px;
+      border: 2px solid black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      width: 300px;
+      max-height: 150px;
+      overflow-y: auto;
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      transition: right 1s ease, opacity 1s ease;
+      opacity: 0;
+    }
+
+    .sale-alert.show {
+      right: 20px;
+      opacity: 1;
+    }
+
+    .sale-alert img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .sale-alert .alert-text {
+      display: inline-block;
+    }
+  </style>
+
+<div class="sale-alert show" id="saleAlert" style="display: flex;">
+  <img src="IMG_3157.png" alt="Product Image">
+  <div class="alert-text">
+    <strong>Rohit Reddy</strong> ने Bengaluru से <strong>Madhu Shant</strong> ₹1490 का 1 मिनट पहले ऑर्डर किया
+  </div>
+</div>
+
+<div class="popup" id="popup1" style="display: none;">
+<button class="popup-close" id="popup1-close">×</button>
+<img alt="Price Warning" src="webfiles/price%20warning.jpeg">
+</div>
+
+<div class="popup" id="popup2" style="display: none;">
+<button class="popup-close" id="popup2-close">×</button>
+<img alt="Kimat" src="kimat.jpeg">
+</div>
+
+<style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 25px;
+      text-align: center;
+    }
+
+    .popup img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 480px) {
+      .popup {
+        width: 95%;
+        height: auto;
+        max-width: none;
+      }
+
+      .popup img {
+        width: 100%;
+        height: auto;
+      }
+    }
+</style>
+
+<script>
+function smoothScroll(targetId) {
+  var el = document.getElementById(targetId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dateEl = document.getElementById("todayDate");
+  if (dateEl) {
+    const d = new Date();
+    const formatted = String(d.getDate()).padStart(2, "0") + "." + String(d.getMonth() + 1).padStart(2, "0") + "." + d.getFullYear();
+    dateEl.textContent = formatted;
+  }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById('video');
+  const muteBtn = document.getElementById('muteBtn');
+  const muteIcon = document.getElementById('muteIcon');
+
+  if (video && muteBtn && muteIcon) {
+    muteBtn.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        muteIcon.src = "speaker.png";
+      } else {
+        video.muted = true;
+        muteIcon.src = "mute.png";
+      }
+    });
+  }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const timerDisplay = document.getElementById("timer");
+  if (!timerDisplay) return;
+
+  let time = 10 * 60;
+
+  function updateTimer() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerDisplay.textContent =
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    if (time > 0) {
+      time--;
+    } else {
+      clearInterval(timerInterval);
+      timerDisplay.textContent = "00:00";
+    }
+  }
+
+  updateTimer();
+  const timerInterval = setInterval(updateTimer, 1000);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let stockCount = 17;
+
+  function decreaseStock() {
+    if (stockCount > 1) {
+      stockCount--;
+      const stockEl = document.getElementById("stock-count");
+      if (stockEl) stockEl.textContent = stockCount;
+    }
+  }
+
+  setInterval(decreaseStock, 60000);
+});
+</script>
+
+<script>
+function hideComeback() {
+  const layout = document.getElementById("comebackLayout");
+  if (layout) layout.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let shown = false;
+  document.addEventListener("mouseout", function (e) {
+    if (!shown && e.clientY <= 0) {
+      const layout = document.getElementById("comebackLayout");
+      if (layout) {
+        layout.style.display = "block";
+        shown = true;
+      }
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const names = ['Ajay Kumar', 'Priya Sharma', 'Ravi Singh', 'Neha Gupta', 'Anil Verma', 'Sanya Patel', 'Vikram Yadav', 'Kavita Mehta', 'Rohit Reddy', 'Shilpa Desai'];
+  const districts = ['Allahabad', 'Delhi', 'Kolkata', 'Bengaluru', 'Chennai', 'Hyderabad', 'Pune', 'Jaipur', 'Ahmedabad', 'Lucknow'];
+  const productImage = 'IMG_3157.png';
+  const productName = 'Madhu Shant';
+  const productPrice = 1490;
+
+  function getRandomSaleData() {
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomDistrict = districts[Math.floor(Math.random() * districts.length)];
+    return {
+      customerName: randomName,
+      district: randomDistrict,
+      productName: productName,
+      productPrice: productPrice,
+      productImage: productImage
+    };
+  }
+
+  function showSaleAlert(inquiry) {
+    const saleAlert = document.getElementById("saleAlert");
+    const minutesAgo = Math.floor(Math.random() * 10) + 1;
+    saleAlert.innerHTML = `
+      <img src="${inquiry.productImage}" alt="Product Image">
+      <div class="alert-text">
+        <strong>${inquiry.customerName}</strong> ने ${inquiry.district} से <strong>${inquiry.productName}</strong> ₹${inquiry.productPrice} का ${minutesAgo} मिनट पहले ऑर्डर किया
+      </div>
+    `;
+    saleAlert.style.display = 'flex';
+    setTimeout(() => {
+      saleAlert.classList.add("show");
+    }, 50);
+
+    setTimeout(function() {
+      saleAlert.classList.remove("show");
+      setTimeout(function() {
+        saleAlert.style.display = 'none';
+      }, 1000);
+    }, 4000);
+  }
+
+  function showFakeSaleAlerts() {
+    let isAlertShowing = false;
+
+    function showNextSale() {
+      if (isAlertShowing) return;
+
+      const randomSale = getRandomSaleData();
+      showSaleAlert(randomSale);
+      isAlertShowing = true;
+
+      setTimeout(function() {
+        isAlertShowing = false;
+      }, 5000);
+
+      setTimeout(showNextSale, 10000);
+    }
+
+    showNextSale();
+  }
+
+  showFakeSaleAlerts();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaLe9Dm3Q9RGBfYrkT3bUsk3tUkMW3yfpWQg4knBAds9xlfG2XvwxT1bZkMQEr_JXkJg/exec";
+
+  const form = document.getElementById("leadForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const submitBtnText = document.getElementById("submitBtnText");
+  const formMessage = document.getElementById("formMessage");
+
+  const nameInput = document.getElementById("form-field-name");
+  const phoneInput = document.getElementById("form-field-phone");
+  const addressInput = document.getElementById("form-field-address");
+
+  function getDeviceType() {
+    const ua = navigator.userAgent;
+    if (/mobile/i.test(ua)) return "Mobile";
+    if (/tablet|ipad/i.test(ua)) return "Tablet";
+    return "Desktop";
+  }
+
+  function getQueryParam(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name) || "";
+  }
+
+  document.getElementById("utm_source").value = getQueryParam("utm_source");
+  document.getElementById("utm_medium").value = getQueryParam("utm_medium");
+  document.getElementById("utm_campaign").value = getQueryParam("utm_campaign");
+  document.getElementById("utm_term").value = getQueryParam("utm_term");
+  document.getElementById("utm_content").value = getQueryParam("utm_content");
+  document.getElementById("fbclid").value = getQueryParam("fbclid");
+  document.getElementById("gclid").value = getQueryParam("gclid");
+  document.getElementById("page_url").value = window.location.href;
+  document.getElementById("referrer").value = document.referrer || "";
+  document.getElementById("user_agent").value = navigator.userAgent;
+  document.getElementById("device").value = getDeviceType();
+
+  const draftKey = "madhushant_form_draft";
+
+  function saveDraftLocally() {
+    const draft = {
+      name: nameInput ? nameInput.value : "",
+      phone: phoneInput ? phoneInput.value : "",
+      address: addressInput ? addressInput.value : ""
+    };
+    localStorage.setItem(draftKey, JSON.stringify(draft));
+  }
+
+  function loadDraftLocally() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(draftKey) || "{}");
+      if (saved.name && nameInput) nameInput.value = saved.name;
+      if (saved.phone && phoneInput) phoneInput.value = saved.phone;
+      if (saved.address && addressInput) addressInput.value = saved.address;
+    } catch (e) {}
+  }
+
+  function clearDraftLocally() {
+    localStorage.removeItem(draftKey);
+  }
+
+  if (nameInput) {
+    nameInput.addEventListener("input", saveDraftLocally);
+    nameInput.addEventListener("blur", saveDraftLocally);
+  }
+  if (phoneInput) {
+    phoneInput.addEventListener("input", saveDraftLocally);
+    phoneInput.addEventListener("blur", saveDraftLocally);
+  }
+  if (addressInput) {
+    addressInput.addEventListener("input", saveDraftLocally);
+    addressInput.addEventListener("blur", saveDraftLocally);
+  }
+
+  loadDraftLocally();
+
+  if (!form) return;
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const address = addressInput.value.trim();
+
+    if (!name) {
+      formMessage.style.color = "red";
+      formMessage.textContent = "कृपया अपना नाम भरें।";
+      return;
+    }
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+      formMessage.style.color = "red";
+      formMessage.textContent = "कृपया सही 10 अंकों का मोबाइल नंबर भरें।";
+      return;
+    }
+
+    if (!address) {
+      formMessage.style.color = "red";
+      formMessage.textContent = "कृपया अपना पता भरें।";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtnText.textContent = "भेजा जा रहा है...";
+    formMessage.style.color = "#333";
+    formMessage.textContent = "";
+
+    const payload = {
+      name: name,
+      phone: phone,
+      address: address,
+      utm_source: document.getElementById("utm_source").value,
+      utm_medium: document.getElementById("utm_medium").value,
+      utm_campaign: document.getElementById("utm_campaign").value,
+      utm_term: document.getElementById("utm_term").value,
+      utm_content: document.getElementById("utm_content").value,
+      fbclid: document.getElementById("fbclid").value,
+      gclid: document.getElementById("gclid").value,
+      page_url: document.getElementById("page_url").value,
+      referrer: document.getElementById("referrer").value,
+      user_agent: document.getElementById("user_agent").value,
+      device: document.getElementById("device").value,
+      submitted_at: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        }
+      });
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        clearDraftLocally();
+        formMessage.style.color = "green";
+        formMessage.textContent = "धन्यवाद! आपका विवरण सफलतापूर्वक भेज दिया गया है।";
+        form.reset();
+
+        setTimeout(function () {
+          window.location.href = "thankyou.html";
+        }, 1200);
+      } else {
+        throw new Error(result.message || "Submission failed");
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      formMessage.style.color = "red";
+      formMessage.textContent = "फ़ॉर्म सबमिट नहीं हो सका। कृपया दोबारा प्रयास करें।";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtnText.textContent = "अभी ऑर्डर करें";
+    }
+  });
+});
+</script>
+<a
+  href="https://wa.me/919217048964?text=Hi%20I%20want%20more%20details"
+  class="wa-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <span class="wa-btn__icon" aria-hidden="true">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+      <path d="M19.11 17.23c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.57-1.49-1.84-.15-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.58 1.09 2.76.14.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.16.15-1.27-.06-.11-.24-.18-.51-.31z"/>
+      <path d="M16.03 3C8.84 3 3 8.73 3 15.8c0 2.25.6 4.45 1.75 6.39L3 29l7-1.82a13.2 13.2 0 0 0 6.03 1.45c7.19 0 13.03-5.73 13.03-12.8C29.06 8.73 23.22 3 16.03 3zm0 23.37c-1.93 0-3.82-.5-5.49-1.45l-.39-.22-4.15 1.08 1.11-4.03-.25-.41a10.46 10.46 0 0 1-1.6-5.54c0-5.82 4.81-10.56 10.77-10.56 5.94 0 10.77 4.74 10.77 10.56 0 5.82-4.83 10.57-10.77 10.57z"/>
+    </svg>
+  </span>
+  <span class="wa-btn__text">Send Message</span>
+</a>
+
+</body>
+</html>
