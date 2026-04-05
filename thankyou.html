@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -11,159 +12,170 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
+/* INIT PIXEL */
 fbq('init', '889910864003237');
-fbq('track', 'Purchase');
+
+/* PAGE VIEW */
+fbq('track', 'PageView');
+
+/* LEAD EVENT (Best for COD funnel) */
+fbq('track', 'Lead');
+
+/* PURCHASE EVENT (FIXED WITH VALUE + CURRENCY) */
+fbq('track', 'Purchase', {
+  value: 999.00,  // 🔁 Change this to your product price
+  currency: 'INR'
+});
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=889910864003237&ev=Purchase&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=889910864003237&ev=Purchase&cd[value]=999.00&cd[currency]=INR&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - Order Received</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa, #e4ecf3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thank You - Order Received</title>
 
-    .container {
-      background: #ffffff;
-      padding: 30px 20px;
-      border-radius: 16px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-      max-width: 420px;
-      width: 90%;
-      animation: fadeIn 0.8s ease;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
 
-    h1 {
-      color: #25d366;
-      margin-bottom: 10px;
-      font-size: 26px;
-    }
+  .container {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    max-width: 420px;
+    width: 90%;
+    animation: fadeIn 0.8s ease;
+  }
 
-    p {
-      color: #444;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
+  h1 {
+    color: #25d366;
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
 
-    .product-img {
-      width: 100%;
-      max-width: 220px;
-      margin: 15px auto;
-      display: block;
-      border-radius: 12px;
-    }
+  p {
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
 
-    .highlight {
-      color: #ff4d4d;
-      font-weight: bold;
-    }
+  .product-img {
+    width: 100%;
+    max-width: 220px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+  }
 
-    /* WhatsApp Button */
+  .highlight {
+    color: #ff4d4d;
+    font-weight: bold;
+  }
+
+  .wa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: pulse 1.8s infinite;
+    transition: 0.3s ease;
+  }
+
+  .wa-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .wa-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 22px; }
     .wa-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
-
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      color: #fff;
-      text-decoration: none;
-
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 15px;
-
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      animation: pulse 1.8s infinite;
-      transition: 0.3s ease;
+      width: 100%;
+      font-size: 14px;
+      padding: 12px;
     }
-
-    .wa-btn:hover {
-      transform: scale(1.05);
-    }
-
-    .wa-btn svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .note {
-      margin-top: 15px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 22px; }
-      .wa-btn {
-        width: 100%;
-        font-size: 14px;
-        padding: 12px;
-      }
-    }
-
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>✅ Order Received!</h1>
+  <h1>✅ Order Received!</h1>
 
-    <p>
-      Thank you for your order 🙏<br>
-      Our team will call you shortly for confirmation.
-    </p>
+  <p>
+    Thank you for your order 🙏<br>
+    Our team will call you shortly for confirmation.
+  </p>
 
-    <!-- PRODUCT IMAGE -->
-    <img src="IMG_3157.png" alt="Product" class="IMG_3157.png">
+  <!-- PRODUCT IMAGE -->
+  <img src="IMG_3157.png" alt="Product" class="product-img">
 
-    <p class="highlight">
-      ⚡ जल्दी कन्फर्म करने के लिए WhatsApp पर मैसेज करें
-    </p>
+  <p class="highlight">
+    ⚡ जल्दी कन्फर्म करने के लिए WhatsApp पर मैसेज करें
+  </p>
 
-    <!-- WHATSAPP BUTTON -->
-    <a href="https://wa.me/919217048964?text=Hi%20I%20just%20placed%20an%20order" 
-       class="wa-btn" target="_blank">
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/919217048964?text=Hi%20I%20just%20placed%20an%20order" 
+     class="wa-btn" target="_blank">
 
-      <svg viewBox="0 0 32 32" fill="currentColor">
-        <path d="M19.11 17.23c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.57-1.49-1.84-.15-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.58 1.09 2.76.14.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.16.15-1.27-.06-.11-.24-.18-.51-.31z"/>
-        <path d="M16.03 3C8.84 3 3 8.73 3 15.8c0 2.25.6 4.45 1.75 6.39L3 29l7-1.82a13.2 13.2 0 0 0 6.03 1.45c7.19 0 13.03-5.73 13.03-12.8C29.06 8.73 23.22 3 16.03 3z"/>
-      </svg>
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M19.11 17.23c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.15.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.57-1.49-1.84-.15-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.58 1.09 2.76.14.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.51-.08 1.58-.65 1.8-1.27.22-.63.22-1.16.15-1.27-.06-.11-.24-.18-.51-.31z"/>
+      <path d="M16.03 3C8.84 3 3 8.73 3 15.8c0 2.25.6 4.45 1.75 6.39L3 29l7-1.82a13.2 13.2 0 0 0 6.03 1.45c7.19 0 13.03-5.73 13.03-12.8C29.06 8.73 23.22 3 16.03 3z"/>
+    </svg>
 
-      Confirm on WhatsApp
-    </a>
+    Confirm on WhatsApp
+  </a>
 
-    <p class="note">
-      💬 Fast confirmation = Faster delivery
-    </p>
+  <p class="note">
+    💬 Fast confirmation = Faster delivery
+  </p>
 
-  </div>
+</div>
 
 </body>
 </html>
